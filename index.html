@@ -1,477 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Digital Marketing Professional Profile</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary-color: #0563bb;
-      --secondary-color: #f8f9fa;
-      --text-dark: #343a40;
-      --text-light: #45505b;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-light);
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      color: var(--text-dark);
-    }
-
-    /* Hero Section */
-    #hero {
-      width: 100%;
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1497032628192-86f99d791ba7?q=80&w=2070&auto=format&fit=crop') top center;
-      background-size: cover;
-      position: relative;
-    }
-    #hero:before {
-      content: "";
-      background: rgba(5, 13, 24, 0.3);
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-    }
-    #hero .hero-container {
-      position: relative;
-      z-index: 2;
-      min-width: 300px;
-    }
-    #hero h1 {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 56px;
-    }
-    @media (max-width: 768px) {
-        #hero h1 {
-            font-size: 28px;
-            line-height: 36px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketer & Brand Strategist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #37517e;
+            --primary-light: #47b2e4;
+            --bg-light: #f3f5fa;
+            --text-dark: #2c4964;
+            --text-light: #444444;
         }
-    }
-
-    /* Header */
-    #header {
-      transition: all 0.5s;
-      z-index: 997;
-    }
-    #header.header-scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Navigation */
-    .nav-menu a {
-      color: #a8a8a8;
-      transition: 0.3s;
-      font-size: 15px;
-    }
-    .nav-menu a:hover, .nav-menu .active {
-      color: var(--primary-color);
-    }
-    .header-scrolled .nav-menu a {
-      color: var(--text-light);
-    }
-    .header-scrolled .nav-menu a:hover, .header-scrolled .nav-menu .active {
-      color: var(--primary-color);
-    }
-
-    /* Section general */
-    section {
-      padding: 60px 0;
-      overflow: hidden;
-    }
-    .section-title h2 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      position: relative;
-      color: #173b6c;
-    }
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 50px;
-      height: 3px;
-      background: var(--primary-color);
-      bottom: 0;
-      left: 0;
-    }
-
-    /* Skills */
-    .progress-bar-animated {
-        width: 0;
-        transition: width 1s ease-in-out;
-    }
-
-    /* Resume */
-    .resume-item {
-      padding: 0 0 20px 20px;
-      margin-top: -2px;
-      border-left: 2px solid #1f5297;
-      position: relative;
-    }
-    .resume-item::before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      border-radius: 50px;
-      left: -9px;
-      top: 0;
-      background: #fff;
-      border: 2px solid #1f5297;
-    }
-    
-    /* Contact */
-    .info {
-        border-top: 3px solid var(--primary-color);
-        border-bottom: 3px solid var(--primary-color);
-    }
-
-    /* Utility */
-    .fade-in-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in-section.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-  </style>
+        body {
+            font-family: 'Jost', sans-serif;
+            color: var(--text-light);
+        }
+        h1, h2, h3, h4, h5, h6, .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .header-scrolled {
+            background-color: rgba(40, 58, 90, 0.9);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #ffffff;
+        }
+        #hero {
+            background: var(--primary-dark);
+        }
+        .btn-primary {
+            background-color: var(--primary-light);
+            border-color: var(--primary-light);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #209dd8;
+            border-color: #209dd8;
+        }
+        .section-title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            color: var(--primary-dark);
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary-light);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes hero-animation {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .hero-animated {
+            animation: hero-animation 2s ease-in-out infinite;
+        }
+        .portfolio-filter-btn.active {
+            background-color: var(--primary-light);
+            color: white;
+        }
+        .portfolio-item .portfolio-info {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .portfolio-item:hover .portfolio-info {
+            opacity: 1;
+        }
+    </style>
 </head>
-
 <body class="bg-white">
 
-  <!-- Mobile nav toggle button -->
-  <button type="button" id="mobile-nav-toggle" class="lg:hidden fixed top-4 right-4 z-[999] w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
-    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-  </button>
-
-  <!-- Header -->
-  <header id="header" class="fixed top-0 left-0 right-0 lg:pl-[100px] h-20 flex items-center">
-    <nav id="nav-menu" class="nav-menu hidden lg:flex w-full justify-center">
-      <ul class="flex items-center space-x-8">
-        <li><a href="#hero" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <!-- Mobile Nav -->
-  <div id="mobile-nav" class="lg:hidden fixed inset-0 bg-black bg-opacity-90 z-[998] hidden">
-    <nav class="flex flex-col items-center justify-center h-full">
-      <ul class="text-center space-y-8">
-        <li><a href="#hero" class="text-white text-2xl mobile-nav-link">Home</a></li>
-        <li><a href="#about" class="text-white text-2xl mobile-nav-link">About</a></li>
-        <li><a href="#resume" class="text-white text-2xl mobile-nav-link">Resume</a></li>
-        <li><a href="#contact" class="text-white text-2xl mobile-nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <!-- Hero Section -->
-  <section id="hero" class="flex flex-col justify-center items-center text-center">
-    <div class="hero-container text-white">
-      <h1>Digital Marketing Leader</h1>
-      <p class="mt-4 text-2xl">Driving business growth with data-driven strategies</p>
-    </div>
-  </section>
-
-  <main id="main" class="lg:ml-[100px]">
-
-    <!-- About Section -->
-    <section id="about" class="container mx-auto px-6 fade-in-section">
-      <div class="section-title">
-        <h2>About</h2>
-        <p class="mt-4">Over 5 years of experience in digital marketing, with a strong track record of delivering impactful, ROI-driven campaigns across multiple platforms.</p>
-      </div>
-
-      <div class="flex flex-col lg:flex-row gap-8">
-        <div class="lg:w-1/3 flex justify-center">
-          <img src="https://i.ibb.co/k2h0L5s/profile-pic.png" class="w-full max-w-sm rounded-lg shadow-lg" alt="Profile Picture">
+    <!-- Header -->
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="#hero" class="text-3xl font-bold text-white font-poppins">PROFILE</a>
+            <nav class="hidden lg:flex items-center space-x-8">
+                <a href="#hero" class="nav-link active text-gray-300 font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-300 font-medium">About</a>
+                <a href="#process" class="nav-link text-gray-300 font-medium">My Process</a>
+                <a href="#portfolio" class="nav-link text-gray-300 font-medium">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-300 font-medium">Contact</a>
+            </nav>
+            <button id="mobile-menu-btn" class="lg:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
         </div>
-        <div class="lg:w-2/3">
-          <h3 class="text-2xl font-bold text-[#173b6c]">Digital Marketing & Brand Strategist.</h3>
-          <p class="italic my-4">
-            Skilled in end-to-end campaign management, including content creation, design, posting, performance monitoring, and budget allocation.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div><strong class="text-gray-800">> Degree:</strong> Bachelor of Computer Science</div>
-            <div><strong class="text-gray-800">> Phone:</strong> +66 00 000 0000</div>
-            <div><strong class="text-gray-800">> University:</strong> Prince of Songkla University</div>
-            <div><strong class="text-gray-800">> Email:</strong> example@email.com</div>
-          </div>
-          <p class="mt-6">
-            Proficient in analyzing data to optimize strategies and drive results. Experienced in managing marketing budgets to align with campaign plans and consistently achieving sales targets.
-          </p>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white">
+            <a href="#hero" class="block text-center py-2 text-gray-700 hover:bg-gray-100 mobile-nav-link">Home</a>
+            <a href="#about" class="block text-center py-2 text-gray-700 hover:bg-gray-100 mobile-nav-link">About</a>
+            <a href="#process" class="block text-center py-2 text-gray-700 hover:bg-gray-100 mobile-nav-link">My Process</a>
+            <a href="#portfolio" class="block text-center py-2 text-gray-700 hover:bg-gray-100 mobile-nav-link">Portfolio</a>
+            <a href="#contact" class="block text-center py-2 text-gray-700 hover:bg-gray-100 mobile-nav-link">Contact</a>
         </div>
-      </div>
-    </section>
+    </header>
 
-    <!-- Skills Section -->
-    <section id="skills" class="bg-gray-50 fade-in-section">
-      <div class="container mx-auto px-6">
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>My core competencies in the digital marketing landscape, honed through years of hands-on experience and continuous learning.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="text-sm font-medium">Social Media Marketing</span>
-                <span class="text-sm font-medium">92%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full progress-bar-animated" data-width="92%"></div></div>
-            </div>
-             <div>
-              <div class="flex justify-between mb-1">
-                <span class="text-sm font-medium">Campaign Management</span>
-                <span class="text-sm font-medium">90%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full progress-bar-animated" data-width="90%"></div></div>
-            </div>
-             <div>
-              <div class="flex justify-between mb-1">
-                <span class="text-sm font-medium">SEO/SEM</span>
-                <span class="text-sm font-medium">88%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full progress-bar-animated" data-width="88%"></div></div>
-            </div>
-             <div>
-              <div class="flex justify-between mb-1">
-                <span class="text-sm font-medium">Data Analysis</span>
-                <span class="text-sm font-medium">85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full progress-bar-animated" data-width="85%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="text-sm font-medium">Budget Management</span>
-                <span class="text-sm font-medium">85%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full progress-bar-animated" data-width="85%"></div></div>
-            </div>
-            <div>
-              <div class="flex justify-between mb-1">
-                <span class="text-sm font-medium">Content Creation</span>
-                <span class="text-sm font-medium">80%</span>
-              </div>
-              <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full progress-bar-animated" data-width="80%"></div></div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="container mx-auto px-6 fade-in-section">
-      <div class="section-title">
-        <h2>Resume</h2>
-        <p>A detailed look at my professional journey, showcasing my career progression, key responsibilities, and educational background.</p>
-      </div>
-
-      <div class="flex flex-col lg:flex-row gap-8">
-        <div class="lg:w-1/2">
-          <h3 class="text-2xl font-bold mb-4">Education</h3>
-          <div class="resume-item">
-            <h4 class="text-xl font-semibold text-[#173b6c]">Bachelor of Computer Science</h4>
-            <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2005 - 2009</h5>
-            <p><em>Prince of Songkla University, Phuket, Thailand</em></p>
-          </div>
-          
-          <h3 class="text-2xl font-bold mt-8 mb-4">Professional Experience</h3>
-          <div class="resume-item">
-            <h4 class="text-xl font-semibold text-[#173b6c]">Head of Digital Marketing</h4>
-            <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2019 - Present</h5>
-            <p><em>Bangkok Hospital Phuket</em></p>
-          </div>
-          <div class="resume-item">
-            <h4 class="text-xl font-semibold text-[#173b6c]">Deputy Head of Corporate Branding</h4>
-            <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2016 - 2018</h5>
-            <p><em>Bangkok Hospital Phuket</em></p>
-          </div>
-           <div class="resume-item">
-            <h4 class="text-xl font-semibold text-[#173b6c]">Graphic Design</h4>
-            <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2015 - 2016</h5>
-            <p><em>Bangkok Hospital Phuket</em></p>
-          </div>
-        </div>
-        <div class="lg:w-1/2">
-            <h3 class="text-2xl font-bold mb-4 lg:invisible">.</h3>
-            <div class="resume-item">
-              <h4 class="text-xl font-semibold text-[#173b6c]">Graphic Design</h4>
-              <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2013 - 2015</h5>
-              <p><em>Art and Culture Asia Serendipity Design</em></p>
-            </div>
-            <div class="resume-item">
-              <h4 class="text-xl font-semibold text-[#173b6c]">Senior Graphic Design</h4>
-              <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2010 - 2013</h5>
-              <p><em>La Flora Report Patong | The Naka Phuket</em></p>
-            </div>
-            <div class="resume-item">
-              <h4 class="text-xl font-semibold text-[#173b6c]">Web Graphic Design</h4>
-              <h5 class="bg-gray-100 inline-block px-2 py-1 my-2 text-sm">2009 - 2010</h5>
-              <p><em>Guid Vision / Phuketindex.com</em></p>
-            </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gray-50 fade-in-section">
-       <div class="container mx-auto px-6">
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision. Feel free to get in touch with me.</p>
-        </div>
-        <div class="info p-6 md:p-8 w-full bg-white shadow-md rounded-lg">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-start">
-                    <div class="text-blue-600 bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
-                    </div>
-                    <div class="ml-4">
-                        <h4 class="text-xl font-bold">Location:</h4>
-                        <p>Phuket, Thailand</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="pt-20">
+            <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-80px)]">
+                <div class="lg:w-1/2 text-white text-center lg:text-left mb-12 lg:mb-0">
+                    <h1 class="text-4xl lg:text-5xl font-bold font-poppins leading-tight">Better Solutions For Your Business</h1>
+                    <h2 class="text-xl lg:text-2xl mt-4 text-gray-300">I am a talented digital marketer crafting data-driven strategies</h2>
+                    <div class="mt-8">
+                        <a href="#portfolio" class="inline-block btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg">View My Work</a>
                     </div>
                 </div>
-                <div class="flex items-start">
-                    <div class="text-blue-600 bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                       <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                    </div>
-                    <div class="ml-4">
-                        <h4 class="text-xl font-bold">Email:</h4>
-                        <p>example@email.com</p>
-                    </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/hero-img.png" alt="Hero Image" class="w-full max-w-md hero-animated">
                 </div>
-                <div class="flex items-start">
-                    <div class="text-blue-600 bg-blue-100 rounded-full w-12 h-12 flex items-center justify-center">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="section-title text-center">
+                    <h2 class="fade-in-up">About Me</h2>
+                </div>
+                <div class="flex flex-col lg:flex-row items-center gap-12 mt-12">
+                    <div class="lg:w-1/2 fade-in-up">
+                        <p class="text-xl font-semibold text-primary-dark mb-4">A passionate marketer driven by results.</p>
+                        <p class="mb-4">
+                            With over 5 years in the dynamic world of digital marketing, I bring a robust track record of developing and executing impactful, ROI-focused campaigns. My expertise lies in end-to-end campaign management—from ideation to execution and analysis. I thrive on transforming raw data into actionable insights to optimize strategies and drive sustainable growth.
+                        </p>
+                        <p>My core skills include content creation, SEO/SEM, social media strategy, and meticulous budget management, all aimed at exceeding goals and delivering value.</p>
                     </div>
-                    <div class="ml-4">
-                        <h4 class="text-xl font-bold">Call:</h4>
-                        <p>+66 00 000 0000</p>
+                    <div class="lg:w-1/2 fade-in-up flex justify-center">
+                         <img src="https://i.ibb.co/k2h0L5s/profile-pic.png" alt="Profile Picture" class="w-full max-w-sm rounded-lg shadow-xl">
                     </div>
                 </div>
             </div>
-        </div>
-       </div>
-    </section>
+        </section>
 
-  </main>
+        <!-- My Process Section -->
+        <section id="process" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="section-title text-center">
+                    <h2 class="fade-in-up">My Process</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-lg fade-in-up">A systematic approach to ensure every campaign is a success, from initial strategy to final analysis and optimization.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center fade-in-up">
+                        <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/steps/steps-1.webp" alt="Strategy" class="w-full max-w-xs mb-4">
+                        <h3 class="text-xl font-bold font-poppins text-primary-dark mb-2">1. Strategy & Analysis</h3>
+                        <p>Deep dive into market research, competitor analysis, and audience insights to build a data-backed campaign foundation.</p>
+                    </div>
+                     <!-- Step 2 -->
+                    <div class="flex flex-col items-center fade-in-up" style="transition-delay: 0.2s;">
+                        <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/steps/steps-2.webp" alt="Creation" class="w-full max-w-xs mb-4">
+                        <h3 class="text-xl font-bold font-poppins text-primary-dark mb-2">2. Creation & Execution</h3>
+                        <p>Develop compelling content and creative assets, launching them across the most effective channels to engage the target audience.</p>
+                    </div>
+                     <!-- Step 3 -->
+                    <div class="flex flex-col items-center fade-in-up" style="transition-delay: 0.4s;">
+                        <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/steps/steps-3.webp" alt="Optimization" class="w-full max-w-xs mb-4">
+                        <h3 class="text-xl font-bold font-poppins text-primary-dark mb-2">3. Optimization & Reporting</h3>
+                        <p>Continuously monitor performance, A/B test variables, and provide transparent reports to refine strategies for maximum ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer class="lg:ml-[100px] text-center p-4 text-sm text-gray-500 bg-gray-100">
-    &copy; Copyright <strong><span>MyPage</span></strong>. All Rights Reserved
-  </footer>
 
-  <script>
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="section-title">
+                    <h2 class="fade-in-up">Portfolio</h2>
+                    <p class="max-w-3xl mx-auto mt-4 text-lg fade-in-up">A selection of projects that showcase my skills in turning strategies into success stories.</p>
+                </div>
+
+                <!-- Filters -->
+                <div id="portfolio-filters" class="flex justify-center flex-wrap gap-2 mt-12 mb-8 fade-in-up">
+                    <button class="portfolio-filter-btn active px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-700 hover:bg-blue-400 hover:text-white transition" data-filter="all">All</button>
+                    <button class="portfolio-filter-btn px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-700 hover:bg-blue-400 hover:text-white transition" data-filter="campaign">Campaigns</button>
+                    <button class="portfolio-filter-btn px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-700 hover:bg-blue-400 hover:text-white transition" data-filter="branding">Branding</button>
+                    <button class="portfolio-filter-btn px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 text-gray-700 hover:bg-blue-400 hover:text-white transition" data-filter="design">Design</button>
+                </div>
+                
+                <!-- Portfolio Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <!-- Portfolio items go here. Using placeholders. -->
+                    <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg fade-in-up" data-category="campaign">
+                        <img src="https://placehold.co/600x400/47b2e4/FFFFFF?text=Campaign" alt="Project 1" class="w-full">
+                        <div class="portfolio-info absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
+                            <h4 class="font-bold text-lg">Campaign Launch</h4>
+                            <p>Social Media</p>
+                        </div>
+                    </div>
+                     <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg fade-in-up" data-category="branding">
+                        <img src="https://placehold.co/600x400/47b2e4/FFFFFF?text=Branding" alt="Project 2" class="w-full">
+                         <div class="portfolio-info absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
+                            <h4 class="font-bold text-lg">Corporate Rebranding</h4>
+                            <p>Strategy</p>
+                        </div>
+                    </div>
+                     <div class="portfolio-item group relative overflow-hidden rounded-lg shadow-lg fade-in-up" data-category="design">
+                        <img src="https://placehold.co/600x400/47b2e4/FFFFFF?text=Design" alt="Project 3" class="w-full">
+                         <div class="portfolio-info absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
+                            <h4 class="font-bold text-lg">Web Design</h4>
+                            <p>UI/UX</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6 text-center">
+                <div class="section-title">
+                    <h2 class="fade-in-up">Contact</h2>
+                     <p class="max-w-3xl mx-auto mt-4 text-lg fade-in-up">Have a project in mind or want to connect? I'd love to hear from you.</p>
+                </div>
+                 <div class="mt-8 fade-in-up">
+                    <a href="mailto:example@email.com" class="inline-block btn-primary text-white font-semibold py-3 px-8 rounded-full text-lg">Get In Touch</a>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-primary-dark text-center py-6">
+        <p class="text-gray-300">&copy; 2025. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const header = document.getElementById('header');
-      const sections = document.querySelectorAll('section[id]');
-      const navLinks = document.querySelectorAll('.nav-menu a');
-      const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-      const mobileNav = document.getElementById('mobile-nav');
-      const menuIcon = document.getElementById('menu-icon');
-      const closeIcon = document.getElementById('close-icon');
-      const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-      
-      // Header scroll effect
-      const headerScrolled = () => {
-        if (window.scrollY > 100) {
-          header.classList.add('header-scrolled');
-        } else {
-          header.classList.remove('header-scrolled');
+        const header = document.getElementById('header');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a.nav-link');
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Active nav link on scroll
+        const observerOptions = { rootMargin: '-50% 0px -50% 0px' };
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+        
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // Fade-in animation
+        const fadeUpElements = document.querySelectorAll('.fade-in-up');
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeUpElements.forEach(el => fadeObserver.observe(el));
+
+        // Portfolio filtering
+        const filterContainer = document.getElementById('portfolio-filters');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        if (filterContainer) {
+            filterContainer.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    filterContainer.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
+                    const filterValue = e.target.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.dataset.category === filterValue) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+                }
+            });
         }
-      };
-      window.addEventListener('load', headerScrolled);
-      window.addEventListener('scroll', headerScrolled);
-
-      // Mobile nav toggle
-      mobileNavToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-        menuIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-      });
-
-      mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileNav.classList.add('hidden');
-          menuIcon.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-        });
-      });
-
-      // Smooth scroll and active nav link
-      const navHighlighter = () => {
-        let scrollY = window.pageYOffset;
-        sections.forEach(current => {
-          const sectionHeight = current.offsetHeight;
-          const sectionTop = current.offsetTop - 58;
-          let sectionId = current.getAttribute('id');
-          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active');
-          } else {
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active');
-          }
-        });
-      };
-      window.addEventListener('scroll', navHighlighter);
-
-      // Skills progress bar animation
-      const skillsSection = document.getElementById('skills');
-      const progressBars = document.querySelectorAll('.progress-bar-animated');
-      const animateSkills = (entries, observer) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  progressBars.forEach(bar => {
-                      bar.style.width = bar.dataset.width;
-                  });
-                  observer.unobserve(entry.target);
-              }
-          });
-      };
-      const skillsObserver = new IntersectionObserver(animateSkills, { threshold: 0.5 });
-      if (skillsSection) {
-        skillsObserver.observe(skillsSection);
-      }
-      
-      // Fade-in animations
-      const fadeInSections = document.querySelectorAll('.fade-in-section');
-      const sectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { rootMargin: "0px 0px -100px 0px" });
-
-      fadeInSections.forEach(section => {
-        sectionObserver.observe(section);
-      });
-
     });
-  </script>
+    </script>
 </body>
-
 </html>
 
