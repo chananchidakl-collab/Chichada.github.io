@@ -90,6 +90,12 @@
         .portfolio-item:hover .portfolio-info {
             opacity: 1;
         }
+        /* Custom styles for 3D Flip */
+        .transform-style-3d { transform-style: preserve-3d; }
+        .perspective-1000 { perspective: 1000px; }
+        .backface-hidden { backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+        .group:hover .flipper { transform: rotateY(180deg); }
     </style>
 </head>
 <body class="bg-white">
@@ -150,8 +156,32 @@
                         </p>
                         <p>My core skills include content creation, SEO/SEM, social media strategy, and meticulous budget management, all aimed at exceeding goals and delivering value.</p>
                     </div>
-                    <div class="lg:w-1/2 fade-in-up flex justify-center group">
-                         <img src="https://github.com/chananchidakl-collab/chananchidakl-collab.github.io/blob/main/unnamed.png?raw=true" alt="Profile Picture" class="w-full max-w-sm rounded-lg shadow-xl transform transition duration-500 ease-in-out group-hover:scale-105 group-hover:shadow-2xl">
+                    <!-- 3D Flip Container -->
+                    <div class="lg:w-1/2 fade-in-up flex justify-center group perspective-1000">
+                         <div class="flipper relative w-full max-w-sm aspect-square transition-transform duration-700 ease-in-out transform-style-3d">
+                            <!-- Front Face -->
+                            <div class="absolute w-full h-full backface-hidden">
+                                <img src="https://github.com/chananchidakl-collab/chananchidakl-collab.github.io/blob/main/unnamed.png?raw=true" alt="Profile Picture" class="w-full h-full object-cover rounded-lg shadow-xl">
+                            </div>
+                            <!-- Back Face -->
+                            <div class="absolute w-full h-full backface-hidden rotate-y-180">
+                                <div class="w-full h-full rounded-lg shadow-xl overflow-hidden">
+                                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                                        <rect width="200" height="200" fill="#f3f5fa"/>
+                                        <circle cx="100" cy="80" r="40" fill="#47b2e4"/>
+                                        <path d="M 60 180 Q 100 130 140 180 Z" fill="#37517e"/>
+                                        <g transform="translate(135, 120)">
+                                            <path d="M 0 0 Q 20 -40 40 0 Z" fill="#47b2e4" stroke="#37517e" stroke-width="2">
+                                                <animateTransform attributeName="transform" type="rotate" from="0" to="-25" dur="0.7s" repeatCount="indefinite" values="0; -25; 0" keyTimes="0; 0.5; 1" />
+                                            </path>
+                                        </g>
+                                        <circle cx="88" cy="75" r="3" fill="white"/>
+                                        <circle cx="112" cy="75" r="3" fill="white"/>
+                                        <path d="M 90 90 Q 100 100 110 90" stroke="white" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
